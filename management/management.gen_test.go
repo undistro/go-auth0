@@ -3614,6 +3614,144 @@ func TestConnectionOptionsAttributeVerification_String(t *testing.T) {
 	}
 }
 
+func TestConnectionOptionsAuth0OAuth2_GetAuthorizationURL(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{AuthorizationURL: &zeroValue}
+	c.GetAuthorizationURL()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetAuthorizationURL()
+	c = nil
+	c.GetAuthorizationURL()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetClientID(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{ClientID: &zeroValue}
+	c.GetClientID()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetClientID()
+	c = nil
+	c.GetClientID()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetClientSecret(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{ClientSecret: &zeroValue}
+	c.GetClientSecret()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetClientSecret()
+	c = nil
+	c.GetClientSecret()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetLogoURL(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{LogoURL: &zeroValue}
+	c.GetLogoURL()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetLogoURL()
+	c = nil
+	c.GetLogoURL()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetNonPersistentAttrs(tt *testing.T) {
+	var zeroValue []string
+	c := &ConnectionOptionsAuth0OAuth2{NonPersistentAttrs: &zeroValue}
+	c.GetNonPersistentAttrs()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetNonPersistentAttrs()
+	c = nil
+	c.GetNonPersistentAttrs()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetPKCEEnabled(tt *testing.T) {
+	var zeroValue bool
+	c := &ConnectionOptionsAuth0OAuth2{PKCEEnabled: &zeroValue}
+	c.GetPKCEEnabled()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetPKCEEnabled()
+	c = nil
+	c.GetPKCEEnabled()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetScope(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{Scope: &zeroValue}
+	c.GetScope()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetScope()
+	c = nil
+	c.GetScope()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetScopesUseSpace(tt *testing.T) {
+	var zeroValue bool
+	c := &ConnectionOptionsAuth0OAuth2{ScopesUseSpace: &zeroValue}
+	c.GetScopesUseSpace()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetScopesUseSpace()
+	c = nil
+	c.GetScopesUseSpace()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetScripts(tt *testing.T) {
+	var zeroValue map[string]string
+	c := &ConnectionOptionsAuth0OAuth2{Scripts: &zeroValue}
+	c.GetScripts()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetScripts()
+	c = nil
+	c.GetScripts()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetSetUserAttributes(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{SetUserAttributes: &zeroValue}
+	c.GetSetUserAttributes()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetSetUserAttributes()
+	c = nil
+	c.GetSetUserAttributes()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetStrategyVersion(tt *testing.T) {
+	var zeroValue int
+	c := &ConnectionOptionsAuth0OAuth2{StrategyVersion: &zeroValue}
+	c.GetStrategyVersion()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetStrategyVersion()
+	c = nil
+	c.GetStrategyVersion()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetTokenURL(tt *testing.T) {
+	var zeroValue string
+	c := &ConnectionOptionsAuth0OAuth2{TokenURL: &zeroValue}
+	c.GetTokenURL()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetTokenURL()
+	c = nil
+	c.GetTokenURL()
+}
+
+func TestConnectionOptionsAuth0OAuth2_GetUpstreamParams(tt *testing.T) {
+	zeroValue := map[string]interface{}{}
+	c := &ConnectionOptionsAuth0OAuth2{UpstreamParams: zeroValue}
+	c.GetUpstreamParams()
+	c = &ConnectionOptionsAuth0OAuth2{}
+	c.GetUpstreamParams()
+	c = nil
+	c.GetUpstreamParams()
+}
+
+func TestConnectionOptionsAuth0OAuth2_String(t *testing.T) {
+	var rawJSON json.RawMessage
+	v := &ConnectionOptionsAuth0OAuth2{}
+	if err := json.Unmarshal([]byte(v.String()), &rawJSON); err != nil {
+		t.Errorf("failed to produce a valid json")
+	}
+}
+
 func TestConnectionOptionsAzureAD_GetAdmin(tt *testing.T) {
 	var zeroValue bool
 	c := &ConnectionOptionsAzureAD{Admin: &zeroValue}

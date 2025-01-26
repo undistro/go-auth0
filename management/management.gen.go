@@ -2949,6 +2949,115 @@ func (c *ConnectionOptionsAttributeVerification) String() string {
 	return Stringify(c)
 }
 
+// GetAuthorizationURL returns the AuthorizationURL field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetAuthorizationURL() string {
+	if c == nil || c.AuthorizationURL == nil {
+		return ""
+	}
+	return *c.AuthorizationURL
+}
+
+// GetClientID returns the ClientID field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetClientID() string {
+	if c == nil || c.ClientID == nil {
+		return ""
+	}
+	return *c.ClientID
+}
+
+// GetClientSecret returns the ClientSecret field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetClientSecret() string {
+	if c == nil || c.ClientSecret == nil {
+		return ""
+	}
+	return *c.ClientSecret
+}
+
+// GetLogoURL returns the LogoURL field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetLogoURL() string {
+	if c == nil || c.LogoURL == nil {
+		return ""
+	}
+	return *c.LogoURL
+}
+
+// GetNonPersistentAttrs returns the NonPersistentAttrs field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetNonPersistentAttrs() []string {
+	if c == nil || c.NonPersistentAttrs == nil {
+		return nil
+	}
+	return *c.NonPersistentAttrs
+}
+
+// GetPKCEEnabled returns the PKCEEnabled field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetPKCEEnabled() bool {
+	if c == nil || c.PKCEEnabled == nil {
+		return false
+	}
+	return *c.PKCEEnabled
+}
+
+// GetScope returns the Scope field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetScope() string {
+	if c == nil || c.Scope == nil {
+		return ""
+	}
+	return *c.Scope
+}
+
+// GetScopesUseSpace returns the ScopesUseSpace field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetScopesUseSpace() bool {
+	if c == nil || c.ScopesUseSpace == nil {
+		return false
+	}
+	return *c.ScopesUseSpace
+}
+
+// GetScripts returns the Scripts field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetScripts() map[string]string {
+	if c == nil || c.Scripts == nil {
+		return map[string]string{}
+	}
+	return *c.Scripts
+}
+
+// GetSetUserAttributes returns the SetUserAttributes field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetSetUserAttributes() string {
+	if c == nil || c.SetUserAttributes == nil {
+		return ""
+	}
+	return *c.SetUserAttributes
+}
+
+// GetStrategyVersion returns the StrategyVersion field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetStrategyVersion() int {
+	if c == nil || c.StrategyVersion == nil {
+		return 0
+	}
+	return *c.StrategyVersion
+}
+
+// GetTokenURL returns the TokenURL field if it's non-nil, zero value otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetTokenURL() string {
+	if c == nil || c.TokenURL == nil {
+		return ""
+	}
+	return *c.TokenURL
+}
+
+// GetUpstreamParams returns the UpstreamParams map if it's non-nil, an empty map otherwise.
+func (c *ConnectionOptionsAuth0OAuth2) GetUpstreamParams() map[string]interface{} {
+	if c == nil || c.UpstreamParams == nil {
+		return map[string]interface{}{}
+	}
+	return c.UpstreamParams
+}
+
+// String returns a string representation of ConnectionOptionsAuth0OAuth2.
+func (c *ConnectionOptionsAuth0OAuth2) String() string {
+	return Stringify(c)
+}
+
 // GetAdmin returns the Admin field if it's non-nil, zero value otherwise.
 func (c *ConnectionOptionsAzureAD) GetAdmin() bool {
 	if c == nil || c.Admin == nil {
